@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Sheet for Information Technology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Marks Sheet for Information Technology</h2>
+        <form id="marksForm">
+            <label for="cLang">1. C Language</label>
+            <input type="number" id="cLang" placeholder="Enter marks here">
+
+            <label for="cppLang">2. C++ Language</label>
+            <input type="number" id="cppLang" placeholder="Enter marks here">
+
+            <label for="database">3. Database</label>
+            <input type="number" id="database" placeholder="Enter marks here">
+
+            <label for="html">4. HTML</label>
+            <input type="number" id="html" placeholder="Enter marks here">
+
+            <label for="css">5. CSS</label>
+            <input type="number" id="css" placeholder="Enter marks here">
+
+            <label for="php">6. PHP</label>
+            <input type="number" id="php" placeholder="Enter marks here">
+
+            <label for="coreJava">7. Core Java</label>
+            <input type="number" id="coreJava" placeholder="Enter marks here">
+
+            <button type="button" onclick="calculateResult()">Calculate Result</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            const cLangMarks = parseFloat(document.getElementById('cLang').value) || 0;
+            const cppLangMarks = parseFloat(document.getElementById('cppLang').value) || 0;
+            const databaseMarks = parseFloat(document.getElementById('database').value) || 0;
+            const htmlMarks = parseFloat(document.getElementById('html').value) || 0;
+            const cssMarks = parseFloat(document.getElementById('css').value) || 0;
+            const phpMarks = parseFloat(document.getElementById('php').value) || 0;
+            const coreJavaMarks = parseFloat(document.getElementById('coreJava').value) || 0;
+
+            const totalMarks = cLangMarks + cppLangMarks + databaseMarks + htmlMarks + cssMarks + phpMarks + coreJavaMarks;
+            const percentage = (totalMarks / 300) * 100;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+    <h3>Result</h3>
+    <p>Total Marks: ${totalMarks} / 300</p>
+    <p>Percentage: ${percentage.toFixed(2)}%</p>
+  `;
+        }
+    </script>
+
+</body>
+
+</html>
