@@ -1,0 +1,119 @@
+1) What is JavaScript?
+->
+   - JavaScript is the programming language for the web. 
+   - javascript can update and change  both HTML & CSS.
+   - JavaScript can calculate, manipulate and validate data.
+
+2) What is the use of isNaN function?
+-> 
+   - isNaN function used to check if a value is NAN(Not a Number).
+   - isNaN() Convert the value to a number before testing it.
+
+3) What is negative Infinity? 
+->
+   - Negative infinity is a special numeric value representing a mathematical 
+     concept of negative infinity.
+
+4) Which company developed JavaScript?
+->
+  - JavaScript developed by Netscape Communication Corproation.
+
+5) What are undeclared and undefined variables? 
+-> 
+   A) UNDELARED VARIBLES
+    
+     - An undeclared varible is one that has been used in the code without being 
+      declared using 'var','let',or'const'.
+
+   B)UNDEFINED VARIBLES 
+
+     - A undifend varible is one that has been declared but not assigned a value,
+       or it has been explicitly set to the value 'undefined'.
+
+6) Write the code for adding new elements dynamically? 
+->
+   // Create new Element
+    var newElement = document.createElement("div");
+
+7) What is the difference between ViewState and SessionState ?
+-> 
+   - Viewstate can only be visible from a single page and not multiple pages.
+   - Session state value availability is across all pages available in a user session.
+
+8) What is === operator?
+-> 
+    - check whether its two operands are equal,returning a Boolean result.
+
+9) How can the style/class of an element be changed?
+->
+   - Changing style directly
+     
+        document.getElementById("yourElementId").style.prpperty = "value";
+  
+   - Adding/removing classes
+
+        document.getElementById("yourElementId").classList.add("newclass");
+        document.getElementById("yourElementId").classList.remove("oldclass");
+
+10) How to read and write a file using JavaScript? 
+->
+   Files can be read and  write by using java script function - fopen(), fread(), and fwrite().
+
+11) What are all the looping structures in JavaScript ?
+->
+   A) For loop
+   B) WHile loop
+   C) do-while loop
+   D) for...in loop
+   E) for...of loop
+
+12) How can you convert the string of any base to an integer in JavaScript?
+->
+   - covert string representing number in any base to using 'parseInt' .
+     let binarystring = "1101';
+     let integerValue = parseInt(binaryString, 2);
+     console.log(integerValue);
+     output = 13
+
+13) What is the function of the delete operator?
+-> 
+  - 'delet' operater in javaacript is used to delet a property from an object or 
+     an elemnet of arry.
+  -  EX:
+         let obj = { key: "value", anotherKey: "anotherValue" };
+         delete obj.key;
+         console.log(obj);
+
+14) What are all the types of Pop up boxes available in JavaScript? 
+-> 
+    A) AlterBox
+    B) Confirm Box
+    C) Prompt Box
+
+15) What is the use of Void (0)?
+-> 
+  - void(0) is often used to generate an undefined value. the 'void' operate
+    in javascript takes an expression as an operand and returns 'undefined'.
+    it is typically used with the value '0' as the operand, resulting in undefibed.
+
+    Ex:-
+       let result = void(0);
+       console.log(result);
+
+16) How can a page be forced to load another page in JavaScript? 
+-> 
+   - To force a page to load another page in jaavscript you can use the 'window.location'
+     object to set the 'href' property to the desired URL.
+     
+     EX:-
+       WIndow.location.href = "https://www.example.com";
+
+17)  What are the disadvantages of using innerHTML in JavaScript? 
+-> 
+   - A) Security Concerns
+     B) Perormance implications
+     C) overwriting Event Listeners
+     D) Limited in Non-Html Documnet
+     E) String parsing issue
+
+
