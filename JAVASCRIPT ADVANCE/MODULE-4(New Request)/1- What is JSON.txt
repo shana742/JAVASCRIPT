@@ -1,0 +1,7 @@
+ 1. WHAT IS JSON
+
+      ->   JSON stand for "JavaScript Object Notation"
+
+      ->   JSON lightweight data-interchange format that is easy for humans to read and write and easy for machines to    parse and generate. 
+
+      ->   It is often used to transmit data between a server and a web application as an alternative to XML.

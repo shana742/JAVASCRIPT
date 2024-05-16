@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: sans-serif;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            background: pink;
+        }
+        .logo{
+            color: aliceblue;
+        }
+        nav{
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgb(150, 66, 80);
+            position: relative;
+            height: 70px;
+        }
+        nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        nav ul li {
+            list-style-type: none;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .menu-icon{
+             display: none;   
+        }
+        .menu-icon i {
+            color: aliceblue;
+            font-size: 30px;
+        }
+         @media (max-width: 600px) {
+            nav ul{
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                text-align: center;
+                background: rgb(150, 66, 80);
+                gap: 0;
+                overflow: hidden;
+            }
+            nav ul li {
+                padding: 20px;
+            }
+            .menu-icon{
+                display: block;
+            }
+            .menuList{
+                transition: all 0.5s;
+            }
+           
+        } 
+
+    </style>
+</head>
+<body>
+    <nav>
+     <div class="logo">
+        <h1>Stock</h1>
+    </div>
+     <ul id="menuList">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Service</a></li>
+         <li><a href="#">Product</a></li>
+         <li><a href="#">Contact</a></li>
+        </ul>
+            <div class="menu-icon" >
+                   <i class="fas fa-bars" onclick="toggleMenu()"></i>
+           </div>
+        </nav>
+        <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }else{
+                menuList.style.maxHeight = "0px" ;
+            }
+        }
+     </script>
+</body>
+</html> 

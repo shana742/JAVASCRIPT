@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>This is the first element.</p>
+        <button>Show Alert</button>
+    </div>
+    
+    <div class="container">
+        <p>This is the second element .</p>
+        <button>Show Alert</button>
+    </div>
+    
+    <div class="container">
+        <p>This is the third element .</p>
+        <button>Show Alert</button>
+    </div>
+
+    <script>
+            let elements = document.querySelectorAll(".container");
+            elements.forEach(function (element) {
+                let button = element.querySelector("button");
+                button.addEventListener("click", function () {
+                    let paragraph = element.querySelector("p");
+                    alert(paragraph.textContent);
+                });
+            });
+    </script>
+</body>
+</html>
